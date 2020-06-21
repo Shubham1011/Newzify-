@@ -14,7 +14,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 const HomeScreen=(props)=> {
     const done= async ()=>{
-        await  axi.get('http://newsapi.org/v2/everything?q='+term+'&from=2020-05-21&sortBy=publishedAt&apiKey=8b8d38d7489e4060986c90a20c7f4dd2')
+        await  axi.get('http://newsapi.org/v2/everything?q='+term+'&from=2020-05-21&sortBy=publishedAt&apiKey=YOUR_API_KEY')
         .then( async (res)=>{
             
             await props.navigation.navigate('SpecialScreen',{result:res.data.articles})
@@ -36,10 +36,10 @@ const HomeScreen=(props)=> {
     
         
         try{
-     axi.get('http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=8b8d38d7489e4060986c90a20c7f4dd2')
-        .then((res)=>{settechResult(res.data.articles)}).then(axi.get('http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=8b8d38d7489e4060986c90a20c7f4dd2')
-        .then((res)=>{setsportsResult(res.data.articles)}).then(axi.get('http://newsapi.org/v2/top-headlines?country=in&category=politics&apiKey=8b8d38d7489e4060986c90a20c7f4dd2')
-        .then((res)=>{setpoliticsResult(res.data.articles)}).then(axi.get('http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=8b8d38d7489e4060986c90a20c7f4dd2')
+     axi.get('http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=YOUR_API_KEY')
+        .then((res)=>{settechResult(res.data.articles)}).then(axi.get('http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=YOUR_API_KEY')
+        .then((res)=>{setsportsResult(res.data.articles)}).then(axi.get('http://newsapi.org/v2/top-headlines?country=in&category=politics&apiKey=YOUR_API_KEY')
+        .then((res)=>{setpoliticsResult(res.data.articles)}).then(axi.get('http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=YOUR_API_KEY')
         .then((res)=>{setbusinessResult(res.data.articles)
         setnotloading(true)
         })
