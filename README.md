@@ -19,6 +19,5 @@ Get your api keys from the below site and paste where ever mentioned in the code
 
 https://newsapi.org/
 
-### Watch out the demo below
-
+### Watch out the demo below (Give it a few seconds to load)
 ![](Screen-Recording-20200621-161415.gif)
