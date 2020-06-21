@@ -18,3 +18,7 @@ $ npm start
 Get your api keys from the below site and paste where ever mentioned in the code
 
 https://newsapi.org/
+
+### Watch out the demo below
+
+![](ezgif.com-video-to-gif.gif)
