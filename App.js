@@ -1,19 +1,26 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createAppContainer } from "react-navigation";
+import ArticleDetails from "./screen/ArticleDetails";
+import SpecialScreen from "./screen/SpecialScreen";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+const { createStackNavigator } = require("react-navigation-stack");
+const { default: HomeScreen } = require("./screen/homescreen");
+
+
+const navigator=createStackNavigator({
+   HomeScreen:HomeScreen,
+   ArticleDetails:ArticleDetails,
+   SpecialScreen:SpecialScreen
+},{
+  initialRouteName:'HomeScreen',
+  
+  defaultNavigationOptions:{
+    title:'Newzify',
+    headerTitleStyle:{
+      alignSelf:'center',
+      fontWeight:'bold',
+      fontStyle:'italic'
+    }
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+);
+export default createAppContainer(navigator)
