@@ -21,4 +21,4 @@ https://newsapi.org/
 
 ### Watch out the demo below
 
-![](ezgif.com-video-to-gif.gif)
+![](Screen-Recording-20200621-161415.gif)
